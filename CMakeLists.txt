@@ -2,11 +2,11 @@
 # from CMakeLists.txt in neo/mods/ which in turn is supposed to be used
 # (with add_subdirectory()...) from CMakeLists.txt in neo/
 
-# base game (as an example and to branch mods from)
+# Classic Doom 3
 
 # it's based on the base game (from game/), so use corresponding source files
 # and add the dentonmod-specific files (tracer.cpp)
-set(src_basegame
+set(src_cdoom
 	${src_game_mods} # defined in neo/mods/CMakeLists.txt
 	# add mod specific source (*.cpp) file here
 	# and here etc (one per line)
@@ -14,4 +14,4 @@ set(src_basegame
 
 # SETUP_MOD( name srclist compile_defs ) - also from neo/mods/CMakeLists.txt
 # make sure to have quotes around srclist!
-SETUP_MOD("base" "${src_basegame}" "GAME_DLL")
+SETUP_MOD("cdoom" "${src_cdoom}" "GAME_DLL")

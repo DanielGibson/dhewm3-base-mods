@@ -1,24 +1,54 @@
-This repository contains doom3 mods based on the base game (*not* d3xp) ported to dhewm3.
-Each mod is in its own branch, the master branch is copied from dhewm3's neo/game/ directory and will be updated if it's updated in dhewm3.
-Mods can then easily be updated to those changes by merging the changes from master to the mod branches.
+NOTE from Daniel: 
+The following is (mostly) the original README of the mod and still refers to the SDK etc.
 
-These mods are "linked" (as git submodules) in the https://github.com/DanielGibson/dhewm3-mods project. 
-There you'll also find informations on how to compile the mods.
+You can get the game data from http://www.gamefront.com/files/files/9003559/classic_doom_3_1.3.1.zip
+Just extract that zip to your Doom3/dhewm3 installation.
 
-*** This means that you usually don't have to clone this repository ***
+After compiling the source, you can start the game with
+  ./dhewm3 +set fs_game cdoom
+  
+A big THANK YOU to "SnoopJeDi" (and the rest of the Classic Doom 3 Team) for releasing this mod under GPL!
 
-If you want to donate a port, just create pull request for master, I'll create a seperate branch from it and add it to the dhewm3-mods project.
+The original ReadMe:
+======================================================================
+CLASSIC DOOM III - VERSION 1.3.1 Sourcecode
+======================================================================
 
-The usual (easiest) way to port a mod is to make a diff between the mod's source and the Doom3 SDK and apply the resulting patch to the vanilla game source (from the master branch).
-Afterwards usually some manual work must be done to resolve patching conflicts and get the mod to compile. Also, the CMakeLists.txt file must be adjusted (see dentonmod for examples).
-
-Please note that currently I only accept mods that are released under the GPL license - the one used by Open Source Doom3 (i.e. *not* only the Doom3 SDK license) - because merging GPL code and SDK license code is illegal. So please get permission from the Mod authors first.
-
-If you are a mod author and want to release your mod's sourcecode under GPL, but don't want to port it yourself (or don't have time) contact me, maybe I can help you :-)
-
-Once d3xp (Resurrection of Evil) based mods (or their GPL'ed source) turn up, I'll create a similar project for that.
+DEVELOPER - Flaming Sheep Software
+DATE OF RELEASE - October 2007
+HOMEPAGE - http://cdoom.d3files.com
+FORUMS - http://cdoom.d3files.com/forum/index.php
 
 
-Cheers,
+======================================================================
+Description
+======================================================================
 
-- Daniel
+This is a package of all the files from the Doom 3 Software Development Kit (SDK) that have been modified in the creation of Classic Doom 3.  The more predominant features of this code are the following:
+
+-The intermission/statistics screen displayed between levels (there is an unused key/val combination that would allow mappers to update the GUI graphics depending the sequential progress of the player.  This was originally designed to facilitate a map on the intermission screen, but was dropped).
+
+-Autorun.  A very small modification that simply checks the state of ui_autoRun and accordingly either flips input from the run key or leaves it untouched.
+
+
+For a complete picture of what has been changed, cross-reference this code and the untouched 1.3.1 code using diff or a similar program for your operating system.
+
+
+
+======================================================================
+Legal
+======================================================================
+
+This modification is only for use with a legitimate version of the game "Doom 3", created by id Software.  This modification is not affiliated with id Software in any way.
+
+If there is any technical issues directly related to this modification that is not a known issue with the game "Doom 3", please contact Flaming Sheep Software either through email or the website at http://cdoom.d3files.com
+
+Activision and id Software do not hold responsibility for any technical issues that you may encouter through the use of this modification.
+
+Distribution of this modification can be by any means necessary, aslong as it is kept as a complete package.
+
+[Any and all assets or code presented in this modification are not allowed to be distributed as part of any other package, in whole or in part.] - UPDATE: got permission by the Coder (SnoopJeDi) to release this source under GPLv3
+
+If you have any questions about the uses that are allowed with the modification, please contact Flaming Sheep Software at http://cdoom.d3files.com
+
+======================================================================
