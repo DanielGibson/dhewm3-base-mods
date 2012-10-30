@@ -5772,10 +5772,11 @@ void idPlayer::PerformImpulse( int impulse ) {
 			}
 			break;
 		}
+		/* // FIXME: this needs to be in framework/UsercmdGen.h .. not sure how to fix this yet.
 		case IMPULSE_30: { // SnoopJeDi - At the request of many.
 			ToggleStatsDebug();
 			break;
-		}
+		} */
 		case IMPULSE_40: {
 			UseVehicle();
 			break;
