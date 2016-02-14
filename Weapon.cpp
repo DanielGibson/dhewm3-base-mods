@@ -3684,7 +3684,12 @@ void idWeapon::Event_LaunchProjectiles( int num_projectiles, float spread, float
 //			if ( i == 0 ) {		// Do this only for first projectile
 
 				projBounds = proj->GetPhysics()->GetBounds().Rotate( proj->GetPhysics()->GetAxis() );
-
+				// DG: sometimes the assertion in idBounds::operator-(const idBounds&) triggers
+				//     (would get bounding box with negative volume)
+				//     => check that before doing ownerBounds - projBounds (equivalent to the check in the assertion)
+				idVec3 obDiff = ownerBounds[1] - ownerBounds[0];
+				idVec3 pbDiff = projBounds[1] - projBounds[0];
+				bool boundsSubLegal =  obDiff.x > pbDiff.x && obDiff.y > pbDiff.y && obDiff.z > pbDiff.z;
 				if ( ( ownerBounds - projBounds).RayIntersection( launch_pos, playerViewAxis[0], distance ) ) {
 					start = launch_pos + distance * playerViewAxis[0];
 				} else {

@@ -351,4 +351,3 @@ idCVar r_bloom_contrast_mult( "r_bloom_contrast_mult", "1.55", CVAR_GAME | CVAR_
 idCVar r_bloom_contrast_min( "r_bloom_contrast_min", "0.1", CVAR_GAME | CVAR_FLOAT, "This is the minimum contrast value when (shift sensitivity based)bloom drops; works only for bloom type 1 and bloom type 2. \nWhen shift sensitivty is turned on bloom contrast varies from (constrast_image x r_bloom_contrast_min) to (constrast_image x r_bloom_contrast_mult).");
 idCVar r_bloom_shiftSensitivity_delay( "r_bloom_shiftSensitivity_delay", "130", CVAR_GAME | CVAR_INTEGER, "Delay in millisecs for shifting the bloom sensitivity. \n0 : No shift sensitivity delay, sensitvity shifts immediately. \n-1 : Disables sensitivity shifting"); // New by Clone JCD
 idCVar r_bloom_blurIterations( "r_bloom_blurIterations", "1", CVAR_GAME | CVAR_INTEGER, "Blur iterations for bloom"); // New by Clone JCD
-
