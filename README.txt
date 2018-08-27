@@ -1,3 +1,14 @@
+NOTE: THIS IS DEPRECATED!
+
+I think I found a better way for mod support in dhewm3: by providing an SDK, similar to the original Mod SDK.  
+See https://github.com/dhewm/dhewm3-sdk for details.  
+It already contains Dentonmod and Classic Doom 3, and more will follow soon!
+
+I'll only keep this stuff here for reference.
+
+
+---------------------------------------
+
 This repository contains doom3 mods based on the base game (*not* d3xp) ported to dhewm3.
 Each mod is in its own branch, the master branch is copied from dhewm3's neo/game/ directory and will be updated if it's updated in dhewm3.
 Mods can then easily be updated to those changes by merging the changes from master to the mod branches.
